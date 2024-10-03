@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <servlet>
+    <description></description>
+    <display-name>PruebaServlet</display-name>
+    <servlet-name>PruebaServlet</servlet-name>
+    <servlet-class>servlets.PruebaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PruebaServlet</servlet-name>
+    <url-pattern>/PruebaServlet</url-pattern>
+  </servlet-mapping>
+  <display-name>libraryWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ServletUsuarioLogin</display-name>
+    <servlet-name>ServletUsuarioLogin</servlet-name>
+    <servlet-class>servlets.ServletUsuarioLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletUsuarioLogin</servlet-name>
+    <url-pattern>/ServletUsuarioLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletUsuarioRegister</display-name>
+    <servlet-name>ServletUsuarioRegister</servlet-name>
+    <servlet-class>servlets.ServletUsuarioRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletUsuarioRegister</servlet-name>
+    <url-pattern>/ServletUsuarioRegister</url-pattern>
+  </servlet-mapping>
+</web-app>
