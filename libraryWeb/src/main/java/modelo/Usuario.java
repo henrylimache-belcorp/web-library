@@ -1,4 +1,4 @@
-package beans;
+package modelo;
 
 public class Usuario {
 	

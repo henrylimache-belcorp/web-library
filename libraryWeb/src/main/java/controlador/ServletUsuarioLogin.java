@@ -1,24 +1,24 @@
-package servlets;
-
+package controlador;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import modelodao.UsuarioController;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import controller.UsuarioController;
 /**
- * Servlet implementation class ServletUsuarioRegister
+ * Servlet implementation class ServletUsuarioLogin
  */
-public class ServletUsuarioRegister extends HttpServlet {
+public class ServletUsuarioLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletUsuarioRegister() {
+    public ServletUsuarioLogin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,18 +27,11 @@ public class ServletUsuarioRegister extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// TODO Auto-generated method stub
 		UsuarioController usuario = new UsuarioController();
-		
 		String username = request.getParameter("username");
 		String contrasena = request.getParameter("contrasena");
-		String nombre = request.getParameter("nombre");
-		String apellidos = request.getParameter("apellidos");
-		String email = request.getParameter("email");
-		double saldo = Double.parseDouble(request.getParameter("saldo"));
-		boolean premium = Boolean.parseBoolean(request.getParameter("premium"));
-		
-		String result = usuario.register(username, contrasena, nombre, apellidos, email, saldo, premium);
+		String result = usuario.login(username,contrasena);
 		
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();

@@ -4,7 +4,7 @@
     <description></description>
     <display-name>PruebaServlet</display-name>
     <servlet-name>PruebaServlet</servlet-name>
-    <servlet-class>servlets.PruebaServlet</servlet-class>
+    <servlet-class>controlador.PruebaServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PruebaServlet</servlet-name>
@@ -23,7 +23,7 @@
     <description></description>
     <display-name>ServletUsuarioLogin</display-name>
     <servlet-name>ServletUsuarioLogin</servlet-name>
-    <servlet-class>servlets.ServletUsuarioLogin</servlet-class>
+    <servlet-class>controlador.ServletUsuarioLogin</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletUsuarioLogin</servlet-name>
@@ -33,10 +33,20 @@
     <description></description>
     <display-name>ServletUsuarioRegister</display-name>
     <servlet-name>ServletUsuarioRegister</servlet-name>
-    <servlet-class>servlets.ServletUsuarioRegister</servlet-class>
+    <servlet-class>controlador.ServletUsuarioRegister</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletUsuarioRegister</servlet-name>
     <url-pattern>/ServletUsuarioRegister</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletUsuarioPedir</display-name>
+    <servlet-name>ServletUsuarioPedir</servlet-name>
+    <servlet-class>controlador.ServletUsuarioPedir</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletUsuarioPedir</servlet-name>
+    <url-pattern>/ServletUsuarioPedir</url-pattern>
   </servlet-mapping>
 </web-app>

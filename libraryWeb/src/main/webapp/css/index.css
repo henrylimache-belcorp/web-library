@@ -7,3 +7,7 @@
 .sizeDiv {
 	width:60vw;
 }
+#main-menu {
+	left: unset;
+	right: 0;
+}
