@@ -5,7 +5,7 @@ import java.sql.Statement;
 
 import com.google.gson.Gson;
 
-import connection.DBConnection;
+import modelo.DBConnection;
 import interfaz.IUsuarioController;
 import modelo.Usuario;
 

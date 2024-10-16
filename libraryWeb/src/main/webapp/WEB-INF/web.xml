@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
-  <servlet>
-    <description></description>
-    <display-name>PruebaServlet</display-name>
-    <servlet-name>PruebaServlet</servlet-name>
-    <servlet-class>controlador.PruebaServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>PruebaServlet</servlet-name>
-    <url-pattern>/PruebaServlet</url-pattern>
-  </servlet-mapping>
   <display-name>libraryWeb</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -48,5 +38,15 @@
   <servlet-mapping>
     <servlet-name>ServletUsuarioPedir</servlet-name>
     <url-pattern>/ServletUsuarioPedir</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletLibroListar</display-name>
+    <servlet-name>ServletLibroListar</servlet-name>
+    <servlet-class>controlador.ServletLibroListar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLibroListar</servlet-name>
+    <url-pattern>/ServletLibroListar</url-pattern>
   </servlet-mapping>
 </web-app>

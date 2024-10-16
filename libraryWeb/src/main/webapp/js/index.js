@@ -19,7 +19,7 @@ function autenticarUsuario(){
 		$.ajax({
 			type : "GET",
 			dataType: "html",
-			url: "./ServletUsuarioLogin",
+			url: "/libraryWeb/ServletUsuarioLogin",
 			data: $.param({
 				username:username,
 				contrasena: contrasena
@@ -29,7 +29,7 @@ function autenticarUsuario(){
 				if (parsedResult != false){
 					$("#login-error").addClass("d-none");
 					let username = parsedResult["username"];
-					document.location.href = "home.html?username=" + username;
+					document.location.href = "/libraryWeb/view/home.html?username=" + username;
 				}
 				else{
 					$("#login-error").removeClass("d-none");
@@ -56,7 +56,7 @@ function registrarUsuario(){
 		$.ajax({
 			type:"GET",
 			dataType:"html",
-			url:"./ServletUsuarioRegister",
+			url:"/libraryWeb/ServletUsuarioRegister",
 			data: $.param({
 				username: username,
 				contrasena: contrasena,
@@ -72,7 +72,7 @@ function registrarUsuario(){
 				if (parsedResult != false){
 					$("#register-error").addClass("d-none");
 					let username = parsedResult['username'];
-					document.location.href = "home.html?username=" + username;
+					document.location.href = "/libraryWeb/view/home.html?username=" + username;
 				}
 				else{
 					$("#register-error").removeClass("d-none");
