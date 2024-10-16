@@ -1,4 +1,4 @@
-package connection;
+package modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 public class DBConnection {
 	
 	static String bd = "libreria_utp";
-	static String port = "3307";
+	static String port = "3306";
 	static String login = "root";
-	static String password = "mariadb#$34";
+	static String password = "pass";
 	static String url = "jdbc:mariadb://localhost:" + port + "/" + bd;
 	
 	Connection connection = null;
