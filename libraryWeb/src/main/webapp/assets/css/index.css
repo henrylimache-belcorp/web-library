@@ -1,0 +1,75 @@
+/* Estilo general para centrar la tarjeta */
+body {
+    background: url('../img/biblio.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para la tarjeta */
+.card {
+    width: 450px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.9); /* sombra con color negro y desenfoque */
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+}
+
+
+/* Fondo para el contenedor izquierdo (puede ser una imagen o un color) */
+.bg-login-image {
+    background: url('../img/login.png') no-repeat center center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Estilo de los inputs */
+.form-control {
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Color de borde predeterminado */
+}
+
+.form-control:focus {
+    border-color: white; /* Borde blanco cuando el campo está en foco */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Efecto de sombra suave en blanco */
+    outline: none; /* Elimina el borde azul predeterminado de focus */
+}
+
+/* Estilo del botón */
+#btnEntrar {
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+
+#btnEntrar:focus {
+    border: 1px solid white; /* Borde blanco cuando el botón está en foco */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Sombra suave al hacer foco en el botón */
+    outline: none; /* Elimina el borde predeterminado */
+}
+
+
+/* Texto de error */
+#login-error {
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+#aun{
+margin-top:7px;
+color:black;
+}
