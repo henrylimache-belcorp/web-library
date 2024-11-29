@@ -9,9 +9,10 @@ public class Usuario {
 	private String email;
 	private double saldo;
 	private boolean premium;
+	private String role;
 	
 	public Usuario(String username, String contrasena, String nombre, String apellidos, String email, double saldo,
-			boolean premium) {
+			boolean premium, String role) {
 		super();
 		this.username = username;
 		this.contrasena = contrasena;
@@ -20,12 +21,17 @@ public class Usuario {
 		this.email = email;
 		this.saldo = saldo;
 		this.premium = premium;
+		this.role = role;
 	}
 
 	public String getUsername() {
 		return username;
 	}
 
+    public String getRole() {
+        return role;
+    }
+    
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -77,11 +83,15 @@ public class Usuario {
 	public void setPremium(boolean premium) {
 		this.premium = premium;
 	}
+	
+    public void setRole(String role) {
+        this.role = role;
+    }
 
 	@Override
 	public String toString() {
 		return "Usuario [username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellidos="
-				+ apellidos + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + "]";
+				+ apellidos + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + ", role=" + role + "]";
 	}
 	
 

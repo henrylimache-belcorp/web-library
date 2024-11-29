@@ -49,4 +49,54 @@
     <servlet-name>ServletLibroListar</servlet-name>
     <url-pattern>/ServletLibroListar</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletUpdateNovedad</display-name>
+    <servlet-name>ServletUpdateNovedad</servlet-name>
+    <servlet-class>controlador.ServletUpdateNovedad</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletUpdateNovedad</servlet-name>
+    <url-pattern>/ServletUpdateNovedad</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletLibroAlquilar</display-name>
+    <servlet-name>ServletLibroAlquilar</servlet-name>
+    <servlet-class>controlador.ServletLibroAlquilar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLibroAlquilar</servlet-name>
+    <url-pattern>/ServletLibroAlquilar</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletUsuarioRestarDinero</display-name>
+    <servlet-name>ServletUsuarioRestarDinero</servlet-name>
+    <servlet-class>controlador.ServletUsuarioRestarDinero</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletUsuarioRestarDinero</servlet-name>
+    <url-pattern>/ServletUsuarioRestarDinero</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletAlquilerListar</display-name>
+    <servlet-name>ServletAlquilerListar</servlet-name>
+    <servlet-class>controlador.ServletAlquilerListar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletAlquilerListar</servlet-name>
+    <url-pattern>/ServletAlquilerListar</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletLibroDevolver</display-name>
+    <servlet-name>ServletLibroDevolver</servlet-name>
+    <servlet-class>controlador.ServletLibroDevolver</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLibroDevolver</servlet-name>
+    <url-pattern>/ServletLibroDevolver</url-pattern>
+  </servlet-mapping>
 </web-app>

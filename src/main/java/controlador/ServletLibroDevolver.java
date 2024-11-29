@@ -11,15 +11,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Servlet implementation class ServletLibroListar
+ * Servlet implementation class ServletLibroDevolver
  */
-public class ServletLibroListar extends HttpServlet {
+public class ServletLibroDevolver extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletLibroListar() {
+    public ServletLibroDevolver() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,15 +28,15 @@ public class ServletLibroListar extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		// TODO Auto-generated method stub
 		LibroController libro = new LibroController();
 		
-		String ordenarParam = request.getParameter("ordenar");
-		boolean ordenar = "true".equalsIgnoreCase(ordenarParam);  // Parse "true" or "false"
-		String orden    = request.getParameter("orden");
+		String username = request.getParameter("username");
+		int id = Integer.parseInt(request.getParameter("id"));
 		
-		String libroStr = libro.listar(ordenar, orden);
+		String libroStr = libro.devolver(id,username);
 		
+		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println(libroStr);
 		out.flush();

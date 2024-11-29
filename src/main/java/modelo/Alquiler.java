@@ -3,19 +3,20 @@ package modelo;
 import java.sql.Date;
 
 public class Alquiler {
+	
 	private int id;
-	private String username;
-	private String genero;
+	private String titulo;
 	private Date fechaAlquiler;
 	private boolean novedad;
+	private String genero;
 	
-	public Alquiler(int id, String username, String genero, Date fechaAlquiler, boolean novedad) {
+	public Alquiler(int id, String titulo, Date fechaAlquiler, boolean novedad, String genero) {
 		super();
 		this.id = id;
-		this.username = username;
-		this.genero = genero;
+		this.titulo = titulo;
 		this.fechaAlquiler = fechaAlquiler;
 		this.novedad = novedad;
+		this.genero = genero;
 	}
 
 	public int getId() {
@@ -26,20 +27,14 @@ public class Alquiler {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	
+
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getGenero() {
-		return genero;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public Date getFechaAlquiler() {
@@ -58,12 +53,22 @@ public class Alquiler {
 		this.novedad = novedad;
 	}
 
-	@Override
-	public String toString() {
-		return "Alquiler [id=" + id + ", username=" + username + ", genero=" + genero + ", fechaAlquiler="
-				+ fechaAlquiler + ", novedad=" + novedad + "]";
+	public String getGenero() {
+		return genero;
 	}
 
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	@Override
+	public String toString() {
+		return "Alquiler [id=" + id + ", titulo=" + titulo + ", fechaAlquiler=" + fechaAlquiler + ", novedad="
+				+ novedad + ", genero=" + genero + "]";
+	}
 	
 	
+	
+	
+
 }

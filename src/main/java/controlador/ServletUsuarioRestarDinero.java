@@ -5,21 +5,21 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import modelodao.LibroController;
+import modelodao.UsuarioController;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Servlet implementation class ServletLibroListar
+ * Servlet implementation class ServletUsuarioRestarDinero
  */
-public class ServletLibroListar extends HttpServlet {
+public class ServletUsuarioRestarDinero extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletLibroListar() {
+    public ServletUsuarioRestarDinero() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,17 +28,17 @@ public class ServletLibroListar extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		LibroController libro = new LibroController();
+		// TODO Auto-generated method stub
+		UsuarioController usuario = new UsuarioController();
 		
-		String ordenarParam = request.getParameter("ordenar");
-		boolean ordenar = "true".equalsIgnoreCase(ordenarParam);  // Parse "true" or "false"
-		String orden    = request.getParameter("orden");
+		String username = request.getParameter("username");
+		double saldo = Double.parseDouble(request.getParameter("saldo"));
 		
-		String libroStr = libro.listar(ordenar, orden);
+		String usuarioStr = usuario.restarDinero(username, saldo);
+		response.setContentType("text/html;charset=UTF-8");
 		
 		PrintWriter out = response.getWriter();
-		out.println(libroStr);
+		out.println(usuarioStr);
 		out.flush();
 		out.close();
 	}
